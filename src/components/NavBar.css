@@ -77,6 +77,16 @@
     .open-link{
         color: white;
     }
+    .menu-cross{
+        display: flex;
+        border-bottom: 3px solid white;
+        color: white;
+    }
+    .menu-cross:hover{
+    text-decoration: line-through;
+    cursor: pointer;
+    border: none;
+    }
     @keyframes navFadeIn {
         0%{
             opacity: 0;

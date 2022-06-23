@@ -8,14 +8,17 @@ const NavBar = (props) => {
 
     const [show, setShow] = useState(true)
     const [isNavOpen, setIsNavOpen] = useState(false)
+    const [menuCross,setMenuCross]=useState(false)
     const navLinks = ['HOME', 'ABOUT', 'PROJECTS', 'EVENTS', 'CAREERS', 'BLOGS']
     const controlNavBar = () => {
         if (window.scrollY > 0) {
             setShow(false)
+            setMenuCross(true)
         }
     
         else {
             setShow(true)
+            setMenuCross(false)
         }
     }
 
@@ -52,7 +55,8 @@ const NavBar = (props) => {
                                 }
                             </ul>
                         </div>
-                        <HiMenu className={` ${isNavOpen ? 'hide-mob hide-dev' : 'hamburger'}`} onClick={handleMenu} />
+                        <HiMenu className={` ${isNavOpen ? 'hide-mob hide-dev' : show? 'hamburger': 'hamburger hide-dev'}`} onClick={handleMenu} />
+                        <span className={`hide-mob hide-dev ${show? '': 'menu-cross'}`} onClick={handleMenu}>Menu</span>
                     </div>
                 </nav>
             </header>
