@@ -51,7 +51,7 @@ const NavBar = (props) => {
                                 }
                             </ul>
                         </div>
-                        <HiMenu className={` ${isNavOpen ? 'hide-mob' : 'hamburger'}`} onClick={handleMenu} />
+                        <HiMenu className={` ${isNavOpen ? 'hide-mob hide-dev' : 'hamburger'}`} onClick={handleMenu} />
                     </div>
                 </nav>
             </header>
