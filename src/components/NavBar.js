@@ -8,17 +8,17 @@ const NavBar = (props) => {
 
     const [show, setShow] = useState(true)
     const [isNavOpen, setIsNavOpen] = useState(false)
-    const [menuCross,setMenuCross]=useState(false)
+   
     const navLinks = ['HOME', 'ABOUT', 'PROJECTS', 'EVENTS', 'CAREERS', 'BLOGS']
     const controlNavBar = () => {
         if (window.scrollY > 0) {
             setShow(false)
-            setMenuCross(true)
+         
         }
     
         else {
             setShow(true)
-            setMenuCross(false)
+          
         }
     }
 
@@ -39,7 +39,7 @@ const NavBar = (props) => {
     return (
         <>
             <header>
-                <nav className={` ${isNavOpen ? 'nav-menu' : 'navbar '}`}>
+                <nav className={` ${isNavOpen ? 'nav-menu' : 'navbar'}`}>
                     <div role="banner" className={`d-flex ${isNavOpen ? 'b-flex' : ''}`} >
                         <a href="#"><img src={logo} alt="baksh_logo" className='logo' /></a>
                         <span className={` ${isNavOpen ? 'hide-mob hide-dev' : 'comp-address'}`}>UAN (051)-111 789 111</span>
@@ -47,16 +47,16 @@ const NavBar = (props) => {
                     </div>
                     <div className='d-flex'>
                         <div className={`${isNavOpen ? '' : 'hide-mob'}`}>
-                            <ul className={`d-flex nav-flex  ${!show ? 'nav-links' : isNavOpen? 'open-links': ''}`}>
+                            <ul className={`d-flex nav-flex  ${ isNavOpen? 'open-links': ''}`}>
                                 {
                                     navLinks.map((navLink, index) => (
-                                        <li key={index}><a href="#" className={`nav-link ${isNavOpen ? 'open-link' : ''}`}>{navLink}</a></li>
+                                        <li key={index} className={`nav-item ${ !show ? 'hide-links' : ''}`}><a href="#" className={`nav-link ${ isNavOpen ? 'open-link' : ''}`}>{navLink}</a></li>
                                     ))
                                 }
                             </ul>
                         </div>
-                        <HiMenu className={` ${isNavOpen ? 'hide-mob hide-dev' : show? 'hamburger': 'hamburger hide-dev'}`} onClick={handleMenu} />
-                        <span className={`hide-mob hide-dev ${show? '': 'menu-cross'}`} onClick={handleMenu}>Menu</span>
+                        <HiMenu className={` ${isNavOpen ? 'hide-mob hide-dev' : show? 'hamburger': 'hamburger first-menu'}`} onClick={handleMenu} />
+                        <span className={`hide-mob hide-dev first-cross ${show? '': 'menu-cross'}`} onClick={handleMenu}>Menu</span>
                     </div>
                 </nav>
             </header>
