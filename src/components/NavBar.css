@@ -64,6 +64,9 @@
         display: flex;
         color: white;
     }
+    .close:hover{
+        cursor: pointer;
+    }
     .open-links{
         display: flex;
         flex-direction: column;
@@ -126,6 +129,9 @@
     .close{
         font-size: 22px;
         color: white;
+    }
+    .close:hover{
+        cursor: pointer;
     }
     .d-flex{
         display: flex;
