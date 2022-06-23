@@ -36,7 +36,7 @@ const NavBar = (props) => {
     return (
         <>
             <header>
-                <nav className={` ${isNavOpen ? 'nav-menu' : 'navbar'}`}>
+                <nav className={` ${isNavOpen ? 'nav-menu' : 'navbar '}`}>
                     <div role="banner" className={`d-flex ${isNavOpen ? 'b-flex' : ''}`} >
                         <a href="#"><img src={logo} alt="baksh_logo" className='logo' /></a>
                         <span className={` ${isNavOpen ? 'hide-mob hide-dev' : 'comp-address'}`}>UAN (051)-111 789 111</span>
