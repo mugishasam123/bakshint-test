@@ -5,7 +5,7 @@
         height: 870px;
         background-image: url('../images/background.png');
         background-repeat: no-repeat;
-        background-size: contain; 
+        background-size: 100% 870px ; 
         position: relative;
     }
     .middle{
