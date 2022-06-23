@@ -62,6 +62,16 @@
         font-size: 22px;
         display: flex;
     }
+    .open-links{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        padding: 40px;
+    }
+    .open-link{
+        color: black;
+    }
     
 }
 

@@ -13,6 +13,7 @@ const NavBar = (props) => {
         if (window.scrollY > 0) {
             setShow(false)
         }
+    
         else {
             setShow(true)
         }
@@ -43,10 +44,10 @@ const NavBar = (props) => {
                     </div>
                     <div className='d-flex'>
                         <div className={`${isNavOpen ? '' : 'hide-mob'}`}>
-                            <ul className={`d-flex nav-flex  ${show ? '' : 'nav-links'}`}>
+                            <ul className={`d-flex nav-flex  ${!show ? 'nav-links' : isNavOpen? 'open-links': ''}`}>
                                 {
                                     navLinks.map((navLink, index) => (
-                                        <li key={index}><a href="#" className='nav-link'>{navLink}</a></li>
+                                        <li key={index}><a href="#" className={`nav-link ${isNavOpen ? 'open-link' : ''}`}>{navLink}</a></li>
                                     ))
                                 }
                             </ul>
