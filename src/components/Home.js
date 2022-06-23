@@ -1,20 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from './NavBar'
-import styles from './Home.module.css'
+import './Home.css'
 
 const Home = () => {
+
+    const [navOpen, setNavOpen] = useState(true)
+    const handleNav = (navState) => {
+        setNavOpen(navState)
+    }
+
+
     return (
-        <section className={styles.home}>
-            <NavBar />
-            <div className={styles.middle}>
-                <h1 className={styles.title}>We Value <br />
-                    Your Dreams</h1>
-                <p className={styles.compMission}>Our core mission is to provide the highest <br />
-                 caliber real estate development, management, <br />
-                  and investment services.</p>
+        <section className='home'>
+            <NavBar handleNav={handleNav} />
+            <div className={` ${navOpen ? '' : 'hide-middle'}`}>
+                <div className='middle'>
+                    <h1 className='title'>We Value <br />
+                        Your Dreams</h1>
+                    <p className='comp-mission'>Our core mission is to provide the highest <br />
+                        caliber real estate development, management, <br />
+                        and investment services.</p>
+                </div>
             </div>
         </section>
-
     )
 }
 

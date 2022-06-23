@@ -1,0 +1,143 @@
+@media (min-width: 992px) {
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        position: fixed;
+        width: 100%;
+    }
+    .d-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .nav-link,.comp-address{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: #828282;
+    }
+    .nav-link:focus{
+        color: #C49A50;
+    }
+    .nav-links{
+        display: none;
+      
+    }
+    
+    .hamburger{
+        font-size: 30px;
+        color: #828282;
+    }
+    
+    .hamburger:hover{
+        cursor: pointer;
+    }
+    .hide-dev{
+        display: none;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(96, 112, 255, 0.85);
+        width: auto;
+        height: 100%;
+        padding-left: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        padding: 55px;
+        backdrop-filter: blur(6px);
+    }
+
+    .b-flex{
+        display: flex;
+        justify-content: space-between;
+    }
+   
+    .close{
+        font-size: 22px;
+        display: flex;
+    }
+    
+}
+
+
+@media only screen and (max-width: 992px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        position: fixed;
+        width: 100%;
+    }
+ 
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(96, 112, 255, 0.85);
+        width: auto;
+        height: 100%;
+        padding-left: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        padding: 45px;
+        backdrop-filter: blur(6px);
+    }
+    .b-flex{
+        display: flex;
+        justify-content: space-between;
+    }
+   
+    .close{
+        font-size: 22px;
+    }
+    .d-flex{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .nav-flex{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        padding: 40px;
+        
+    }
+    .logo{
+        width: 53px;
+        height: 15px;
+    }
+    .hide-mob{
+        display: none;
+    }
+    .comp-address{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: #828282;
+        font-size: 15px;
+    }
+    .nav-link:hover{
+        color: #C49A50;
+    }
+    .nav-link:focus{
+        color: #C49A50;
+    }
+    
+    .hamburger{
+        font-size: 30px;
+        color: #828282;
+    }
+    
+    .hamburger:hover{
+        cursor: pointer;
+    }
+}
